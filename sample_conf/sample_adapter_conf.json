@@ -1,0 +1,49 @@
+{
+    "name": "ChikFillA1000I",
+    "model": "@CTL/adapter-Chik-Fill-A-1000I",
+    "type": "Adapter",
+    "properties": {
+        "id": "ChikFillA1000I",
+        "type": "ChikFillA1000I",
+        "properties": {
+            "host": "api.thousandeyes.com",
+            "port": 443,
+            "base_path": "/",
+            "protocol": "https",
+            "authentication": {
+                "auth_method": "basic user_password",
+                "username": "<1000-eyes USERID>",
+                "password": "<1000-eyes API PASSWORD>",
+                "auth_field": "header.headers.Authorization",
+                "auth_field_format": "Basic {b64}{username}:{password}{/b64}",
+                "token": "token",
+                "invalid_token_error": 401,
+                "token_timeout": 0,
+                "token_cache": "local"
+            },
+            "healthcheck": {
+                "type": "intermittent",
+                "frequency": 300000
+            },
+            "proxy": {
+                "enabled": true,
+                "host": "proxy.ushrnd4.savvis.net",
+                "port": 8080,
+                "protocol": "http"
+            }
+        },
+        "brokers": [],
+        "groups": []
+    },
+    "isEncrypted": true,
+    "loggerProps": {
+        "description": "Logging",
+        "log_max_files": 100,
+        "log_max_file_size": 1048576,
+        "log_level": "trace",
+        "log_directory": "/var/log/pronghorn",
+        "log_filename": "1000I.log",
+        "console_level": "warn"
+    }
+}
+

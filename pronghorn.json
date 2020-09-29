@@ -1,0 +1,310 @@
+{
+  "id": "@CTL/adapter-Chik-Fill-A-1000I",
+  "type": "Adapter",
+  "export": "ChikFillA1000I",
+  "title": "Chik-Fill-A-1000I",
+  "src": "adapter.js",
+  "roles": [
+    "admin"
+  ],
+  "methods": [
+    {
+      "name": "updateAdapterConfiguration",
+      "summary": "Updates the adapter configuration",
+      "description": "Updates the adapter configuration file with the provided changes",
+      "input": [
+        {
+          "name": "configFile",
+          "type": "string",
+          "info": "The name of the file to change",
+          "required": true,
+          "schema": {
+            "title": "configFile",
+            "type": "string"
+          }
+        },
+        {
+          "name": "changes",
+          "type": "object",
+          "info": "JSON object containing the configuration changes",
+          "required": true,
+          "schema": {
+            "title": "changes",
+            "type": "object"
+          }
+        },
+        {
+          "name": "entity",
+          "type": "string",
+          "info": "The entity in which the changes are being made",
+          "required": false,
+          "schema": {
+            "title": "entity",
+            "type": "string"
+          }
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "info": "The type of file to change - action, schema, or mock",
+          "required": false,
+          "schema": {
+            "title": "type",
+            "type": "string"
+          }
+        },
+        {
+          "name": "action",
+          "type": "string",
+          "info": "The action to be changed",
+          "required": false,
+          "schema": {
+            "title": "action",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/updateAdapterConfiguration"
+      },
+      "task": true
+    },
+    {
+      "name": "iGetActiveAlerts",
+      "summary": "1000I Get Active Alerts",
+      "description": "1000I Get Active Alerts",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/iGetActiveAlerts"
+      },
+      "task": true
+    },
+    {
+      "name": "iGetAlertsForAPeriod",
+      "summary": "1000I Get Alerts for a Period",
+      "description": "1000I Get Alerts for a Period",
+      "input": [
+        {
+          "name": "from",
+          "type": "query",
+          "info": ": ",
+          "required": true,
+          "schema": {
+            "title": "from",
+            "type": "query"
+          }
+        },
+        {
+          "name": "to",
+          "type": "query",
+          "info": ": ",
+          "required": true,
+          "schema": {
+            "title": "to",
+            "type": "query"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iGetAlertsForAPeriod"
+      },
+      "task": true
+    },
+    {
+      "name": "iGetAlertDetails",
+      "summary": "1000I Get Alert Details",
+      "description": "1000I Get Alert Details",
+      "input": [
+        {
+          "name": "alertID",
+          "type": "default",
+          "info": "path parameter: ",
+          "required": true,
+          "schema": {
+            "title": "alertID",
+            "type": "default"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iGetAlertDetails"
+      },
+      "task": true
+    },
+    {
+      "name": "iRunA1000EyesTest",
+      "summary": "1000I Run a 1000Eyes Test",
+      "description": "1000I Run a 1000Eyes Test",
+      "input": [
+        {
+          "name": "testID",
+          "type": "default",
+          "info": "path parameter: ",
+          "required": true,
+          "schema": {
+            "title": "testID",
+            "type": "default"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iRunA1000EyesTest"
+      },
+      "task": true
+    },
+    {
+      "name": "iGetAlertMetrics",
+      "summary": "1000I Get Alert Metrics",
+      "description": "1000I Get Alert Metrics",
+      "input": [
+        {
+          "name": "testID",
+          "type": "default",
+          "info": "path parameter: ",
+          "required": true,
+          "schema": {
+            "title": "testID",
+            "type": "default"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iGetAlertMetrics"
+      },
+      "task": true
+    },
+    {
+      "name": "iGetAlertMetricsCopy",
+      "summary": "1000I Get Alert Metrics Copy",
+      "description": "1000I Get Alert Metrics Copy",
+      "input": [
+        {
+          "name": "testID",
+          "type": "default",
+          "info": "path parameter: ",
+          "required": true,
+          "schema": {
+            "title": "testID",
+            "type": "default"
+          }
+        },
+        {
+          "name": "agentID",
+          "type": "default",
+          "info": "path parameter: ",
+          "required": true,
+          "schema": {
+            "title": "agentID",
+            "type": "default"
+          }
+        },
+        {
+          "name": "roundID",
+          "type": "default",
+          "info": "path parameter: ",
+          "required": true,
+          "schema": {
+            "title": "roundID",
+            "type": "default"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iGetAlertMetricsCopy"
+      },
+      "task": true
+    }
+  ],
+  "views": []
+}

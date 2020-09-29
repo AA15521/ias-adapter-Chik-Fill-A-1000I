@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "feb29136-7b1e-40ab-94a8-fa46c869d932",
+		"name": "Chik-Fill-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1000I Get Active Alerts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "15d371dd-21ce-4a24-bf33-db40b62e249f",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{c_pass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{c_user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.thousandeyes.com/v6/alerts.json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"thousandeyes",
+						"com"
+					],
+					"path": [
+						"v6",
+						"alerts.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1000I Get Alerts for a Period",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ed5d62a4-80df-46d5-b463-200d1ba244b6",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{c_pass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{c_user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.thousandeyes.com/v6/alerts.json?from={{fromDate}}&to={{toDate}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"thousandeyes",
+						"com"
+					],
+					"path": [
+						"v6",
+						"alerts.json"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "{{fromDate}}"
+						},
+						{
+							"key": "to",
+							"value": "{{toDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1000I Get Alert Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "27ede731-d360-4a02-b1f9-75c07979d013",
+						"exec": [
+							"var noteDetail = responseBody;",
+							"",
+							"postman.setEnvironmentVariable(\"noteDetail\", noteDetail);",
+							"console.log(noteDetail);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "oa86ptwipjpcg8gqd5nar30gy7zgdwmy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Seethalakshmi.Balachandran@Centurylink.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.thousandeyes.com/v6/alerts/{{alertID}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"thousandeyes",
+						"com"
+					],
+					"path": [
+						"v6",
+						"alerts",
+						"{{alertID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1000I Run a 1000Eyes Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6f8636dd-e48f-406a-a908-bec703596b8c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{c_pass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{c_user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.thousandeyes.com/v6/tests/{{testID}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"thousandeyes",
+						"com"
+					],
+					"path": [
+						"v6",
+						"tests",
+						"{{testID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1000I Get Alert Metrics",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "oa86ptwipjpcg8gqd5nar30gy7zgdwmy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Seethalakshmi.Balachandran@Centurylink.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.thousandeyes.com/v6/net/metrics/{{testID}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"thousandeyes",
+						"com"
+					],
+					"path": [
+						"v6",
+						"net",
+						"metrics",
+						"{{testID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1000I Get Alert Metrics Copy",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "oa86ptwipjpcg8gqd5nar30gy7zgdwmy",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Seethalakshmi.Balachandran@Centurylink.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.thousandeyes.com/v6/net/path-vis/{{testID}}/{{agentID}}/{{roundID}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"thousandeyes",
+						"com"
+					],
+					"path": [
+						"v6",
+						"net",
+						"path-vis",
+						"{{testID}}",
+						"{{agentID}}",
+						"{{roundID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

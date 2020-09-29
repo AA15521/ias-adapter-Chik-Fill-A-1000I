@@ -1,0 +1,199 @@
+{
+  "errors": [],
+  "statistics": [
+    {
+      "owner": "errorJson",
+      "description": "Standard adapter errors available for use",
+      "value": 29
+    },
+    {
+      "owner": "packageJson",
+      "description": "Number of production dependencies",
+      "value": 5
+    },
+    {
+      "owner": "packageJson",
+      "description": "Number of development dependencies",
+      "value": 9
+    },
+    {
+      "owner": "packageJson",
+      "description": "Number of npm scripts",
+      "value": 10
+    },
+    {
+      "owner": "packageJson",
+      "description": "Runtime Library dependency",
+      "value": "^4.34.6"
+    },
+    {
+      "owner": "propertiesSchemaJson",
+      "description": "Adapter properties defined in the propertiesSchema file",
+      "value": 56
+    },
+    {
+      "owner": "adapterJS",
+      "description": "Lines of code generated in adapter.js",
+      "value": 744
+    },
+    {
+      "owner": "adapterJS",
+      "description": "Number of Functions added to adapter.js",
+      "value": 6
+    },
+    {
+      "owner": "pronghornJson",
+      "description": "Number of Methods added to pronghorn.json",
+      "value": 6
+    },
+    {
+      "owner": "readmeMd",
+      "description": "Number of lines in the README.md",
+      "value": 531
+    },
+    {
+      "owner": "unitTestJS",
+      "description": "Number of lines of code in unit tests",
+      "value": 958
+    },
+    {
+      "owner": "unitTestJS",
+      "description": "Number of unit tests",
+      "value": 43
+    },
+    {
+      "owner": "integrationTestJS",
+      "description": "Number of lines of code in integration tests",
+      "value": 573
+    },
+    {
+      "owner": "integrationTestJS",
+      "description": "Number of integration tests",
+      "value": 11
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for Default entity",
+      "value": 6
+    },
+    {
+      "owner": "actionJson",
+      "description": "Total number of actions",
+      "value": 6
+    },
+    {
+      "owner": "actionJson",
+      "description": "Total number of entities",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for Default entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Total number of schemas",
+      "value": 1
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for Default entity",
+      "value": 0
+    },
+    {
+      "owner": "mockdata",
+      "description": "Total number of mock data files",
+      "value": 0
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for .system entity",
+      "value": 2
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for .system entity",
+      "value": 3
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for .system entity",
+      "value": 2
+    },
+    {
+      "owner": "System",
+      "description": "System entity files",
+      "value": 6
+    },
+    {
+      "owner": "usecases",
+      "description": "Number of workflows",
+      "value": 0
+    },
+    {
+      "owner": "staticFile",
+      "description": "Number of lines of code in adapterBase.js",
+      "value": 751
+    },
+    {
+      "owner": "staticFile",
+      "description": "Number of static files added",
+      "value": 13
+    },
+    {
+      "owner": "Overall",
+      "description": "Total lines of Code",
+      "value": 3026
+    },
+    {
+      "owner": "Overall",
+      "description": "Total Tests",
+      "value": 54
+    },
+    {
+      "owner": "Overall",
+      "description": "Total Files",
+      "value": 29
+    }
+  ],
+  "apiParsingReport": {
+    "no_mockdata": [
+      {
+        "fnName": "iGetActiveAlerts",
+        "method": "get",
+        "path": "/v6/alerts.json"
+      },
+      {
+        "fnName": "iGetAlertsForAPeriod",
+        "method": "get",
+        "path": "/v6/alerts.json?from={fromDate}&to={toDate}"
+      },
+      {
+        "fnName": "iGetAlertDetails",
+        "method": "get",
+        "path": "/v6/alerts/{alertID}"
+      },
+      {
+        "fnName": "iRunA1000EyesTest",
+        "method": "get",
+        "path": "/v6/tests/{testID}"
+      },
+      {
+        "fnName": "iGetAlertMetrics",
+        "method": "get",
+        "path": "/v6/net/metrics/{testID}"
+      },
+      {
+        "fnName": "iGetAlertMetricsCopy",
+        "method": "get",
+        "path": "/v6/net/path-vis/{testID}/{agentID}/{roundID}"
+      }
+    ],
+    "errors": [],
+    "warnings": [],
+    "callsTotal": 6,
+    "callsConverted": 6,
+    "no_mockdata_num": 6
+  }
+}
